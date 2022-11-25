@@ -1,0 +1,203 @@
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    3. Allow percentage-based heights in the application
+  */
+  html, body {
+    height: 100%;
+    font-size: 15px;
+  }
+  /*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+  body {
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    6. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    7. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    8. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+/* Root Styles */
+  :root {
+    --clr-orange: hsl(25, 97%, 53%);
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-lightGrey: hsl(217, 12%, 63%);
+    --clr-mdGrey: hsl(216, 12%, 54%);
+    --clr-darkBlue: hsl(213, 19%, 18%);
+    --clr-greyBlue: hsl(213, 19%, 25%);
+    --clr-varyDarkBlue: hsl(216, 12%, 8%);
+
+    --ff-primary: 'Overpass', sans-serif;;
+
+    --fw-regular: 400;
+    --fw-bold: 700;
+  }
+
+  /* general styles */
+
+  .grid {
+    display: grid;
+  }
+
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .inactive {
+    display: none;
+  }
+
+  body {
+    background-color: var(--clr-varyDarkBlue);
+    place-content: center;
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-regular);
+    margin: 1.5rem;
+  }
+
+  .card_container, .thank_you_state {
+    background-color: var(--clr-darkBlue);
+    max-width: 25rem;
+    padding: 2rem 1.5rem;
+    border-radius: 1rem;
+    gap: 15px;
+  }
+
+  .star_container, .rating_options button {
+    border-radius: 50%;
+    padding: .8em;
+    width: 2.5rem;
+    
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content_container {
+    gap: 5px;
+  }
+
+  .question_container {
+    color: var(--clr-white);
+  }
+
+  .content_container > p {
+    color: var(--clr-mdGrey);
+    font-size: .925rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .rating_options {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .rating_options button {
+    padding: .5rem;
+    margin-bottom: 1.5rem;
+    transition: .3s linear;
+    font-family: var(--ff-primary);
+    border: none;
+  }
+
+  .btn_hover:hover {
+    cursor: pointer;
+    background-color: var(--clr-mdGrey);
+  }
+
+  .btn_background {
+    background-color: var(--clr-greyBlue);
+  }
+
+  .btn_clicked {
+    background-color: var(--clr-orange);
+  }
+
+  .btn {
+    background-color: var(--clr-orange);
+    width: 100%;
+    cursor: pointer;
+    padding: .75em 1.5em;
+    border: 0;
+    border-radius: 1.5rem;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: var(--fw-bold);
+    text-transform: uppercase;
+    color: var(--clr-white);
+    letter-spacing: 2px;
+    transition: .3s linear;
+  }
+
+  .btn:hover {
+    cursor: pointer;
+  }
+
+  .btn:active {
+    background-color: var(--clr-white);
+    color: var(--clr-orange);
+  }
+
+  /* thank you state styles */
+  .thank_you_state {
+    text-align: center;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .thank_you {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .selection_statement {
+    color: var(--clr-orange);
+    background-color: var(--clr-greyBlue);
+    border-radius: 1.5rem;
+    width: 12rem;
+    padding: .5rem;
+  }
+
+  .content_container h1 {
+    color: var(--clr-white);
+  }
+
+  .content_container p {
+    font-size: 1rem;
+  }

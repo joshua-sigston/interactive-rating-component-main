@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <!-- favicon link -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!-- font links -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+  <!-- style link -->
+  <link rel="stylesheet" href="styles.css">
+  <title>Frontend Mentor | Interactive rating component</title>
+</head>
+<body class="grid">
+  <main class="main_contaienr">
+
+    <div class="card_container grid" id="card-container">
+
+      <picture class="star_container flex btn_background">
+        <img src="images/icon-star.svg" alt="">
+      </picture>
+
+      <div class="content_container grid">
+        <h1 class="question_container">How did we do?</h1>
+        <p>Please let us know how we did with your support request. All feedback is appreciated 
+          to help us improve our offering!</p>
+          <div class="rating_options flex">
+            <button class="flex btn_background btn_hover" id="selection-btn">1</button>
+            <button class="flex btn_background btn_hover" id="selection-btn">2</button>
+            <button class="flex btn_background btn_hover" id="selection-btn">3</button>
+            <button class="flex btn_background btn_hover" id="selection-btn">4</button>
+            <button class="flex btn_background btn_hover" id="selection-btn">5</button>
+          </div>
+
+        <button class="btn" id="btn">Submit</button>
+
+      </div>
+      
+    </div>
+
+    <div class="thank_you_state flex inactive" id="thank-you-state">
+      <picture class="thank_you flex">
+        <img src="images/illustration-thank-you.svg" alt="">
+      </picture>
+      <div class="selection_statement">
+        <p>You selected <span id="selection"></span> out of 5</p>
+      </div>
+      <div class="content_container">
+        <h1>Thank You</h1>
+        <p>We appreciate you taking the time to give a rating. If you ever need more support, 
+          don’t hesitate to get in touch!</p>
+      </div>
+
+    </div>
+
+  </main>
+  <script src="script.js"></script>
+  
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</body>
+</html>
